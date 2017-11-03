@@ -67,8 +67,8 @@ static CGFloat margin = 10.f;
     [self.images makeConstraints:^(MASConstraintMaker *make) {
         make.top.equalTo(self.TitleName.mas_bottom).offset(margin);
         make.left.equalTo(self.iconImageView.mas_right).offset(margin);
-        make.right.equalTo(self.contentView).offset(-margin);
-        make.bottom.equalTo(self.contentView).offset(-margin).priorityMedium();
+        make.right.equalTo(self.contentView.mas_right).offset(-margin);
+        make.bottom.equalTo(self.contentView.mas_bottom).offset(-margin).priorityMedium();
         make.height.equalTo(0).priorityMedium();
     }];
     
@@ -187,7 +187,7 @@ static CGFloat margin = 10.f;
 
 
 @interface ImageView ()
-#define ButtonW   (kScreenWidth - 60-1/2*margin)/3.f
+#define ButtonW   (kScreenWidth - 60-5/2*margin)/3.f
 
 @property(nonatomic ,strong)NSMutableArray *ButtonArray;
 

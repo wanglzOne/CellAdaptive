@@ -63,7 +63,7 @@
         for (int i = 0; i < number; i++) {
             int pictureCount = (int)imageArray.count;
             int picture = arc4random_uniform(pictureCount);
-            NSString * string2  = @"测试cell自适应高度";
+            NSString * string2  = @"测试自适应高度";
             string = [string stringByAppendingString:string2];
             [imagesArray addObject:imageArray[picture]];
         }
